@@ -1,0 +1,83 @@
+body {
+    color: $color-body-text;
+}
+
+p {
+    color: $color-body-text;
+}
+
+.site-nav {
+    position: relative;
+}
+
+.site-nav a {
+    &:visited {
+        color: $color-primary;
+    }
+
+    &:hover {
+        color: $color-primary-hover;
+        text-decoration: none;
+    }
+
+    &:active {
+        color: $color-primary-hover;
+    }
+}
+
+.common-section-title {
+    color: $color-primary;
+    font-size: 5.5rem;
+    font-weight: 600;
+}
+
+.common-body-text-large {
+    font-size: 2.5rem;
+}
+
+.common-body-text {
+    @media only screen and (max-width: 576px) {
+        font-size: 1.6rem;    
+    }
+
+    font-size: 1.8rem;
+}
+
+.common-text-title {
+    @media only screen and (max-width: 576px) {
+        font-size: 2rem;
+    }
+
+    font-size: 2.5rem;
+}
+
+.carousel-indicators {
+    li {
+        background-color: $color-primary;
+        border: 0px;
+        border-radius: 40px;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+.accordion-action {
+    color: $color-link;
+    cursor: pointer;
+}
+
+.footer-brand h3 {
+    @media only screen and (max-width: 576px) {
+        font-size: 1.8rem
+    }
+    
+    font-size: 2.5rem;
+}
+
+.copyright {
+    @media only screen and (max-width: 576px) {
+        font-size: 1.4rem
+    }
+
+    font-size: 1.6rem
+}
