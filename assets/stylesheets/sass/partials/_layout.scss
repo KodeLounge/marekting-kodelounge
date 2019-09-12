@@ -61,6 +61,8 @@ section.site-section {
 #announcement {
     // height: calc(100vh - 65px);
     // overflow: hidden;
+    position: relative;
+    top: 65px;
     margin-bottom: 80px;
 
     // video {

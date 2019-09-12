@@ -113,6 +113,8 @@ section.site-section {
       padding-right: 0; }
 
 #announcement {
+  position: relative;
+  top: 65px;
   margin-bottom: 80px; }
 
 .announcement-content {
