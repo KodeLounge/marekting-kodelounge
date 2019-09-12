@@ -188,7 +188,8 @@ section#principles.section-with-bg:before {
 
 .testimonial img {
   width: 80px;
-  height: 80px; }
+  height: 80px;
+  border-radius: 50%; }
   @media only screen and (max-width: 576px) {
     .testimonial img {
       width: 60px;
