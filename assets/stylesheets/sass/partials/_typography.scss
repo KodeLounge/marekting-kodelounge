@@ -6,6 +6,11 @@ p {
     color: $color-body-text;
 }
 
+.list-group-item { 
+    border: none;
+    background-color: transparent;
+}
+
 .site-nav {
     position: relative;
 }

@@ -132,12 +132,12 @@ section.site-section {
     background-color: $color-light-grey;
 }
 
-section#principles.section-with-bg:before {
-    @media only screen and (max-width: 992px) {
-        height: 110%;
+section#our-work.section-with-bg:before {
+    @media only screen and (max-width: 768px) {
+        height: 108%;
     }
 
-    height: 116%;
+    height: 112%;
 }
 
 .work-card-separator {
@@ -242,8 +242,16 @@ img.work-card--logo {
     }
 }
 
-.list-group-item { 
-    border: none
+section#technologies.section-with-bg:before {
+    @media only screen and (max-width: 576px) {
+        height: 115%;
+    }
+
+    @media only screen and (min-width: 576px) and (max-width: 992px) {
+        height: 125%;
+    }
+
+    height: 145%;
 }
 
 .lounger-icon {
@@ -251,12 +259,20 @@ img.work-card--logo {
     height: 100px;
 }
 
-section#loungers.section-with-bg:before {
-    @media only screen and (max-width: 992px) {
-        height: 116%;
+section#location.section-with-bg:before {
+    @media only screen and (max-width: 768px) {
+        height: 140%;
     }
 
-    height: 145%;
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        height: 165%;
+    }
+
+    height: 165%;
+}
+
+#location-map {
+    border: 2px solid $color-medium-grey
 }
 
 section#address {
@@ -265,21 +281,33 @@ section#address {
     }
 }
 
-section#careers.section-with-bg:before {
-    @media only screen and (max-width: 992px) {
-        height: 145%;
-    }
-
-    height: 165%;
-}
-
 .card, .card-header {
     border: none;
-    background-color: $color-light-grey;
+    background-color: white;
 }
 
 .accordion-separator {
     margin: 25px 0;
+}
+
+section#get-in-touch.section-with-bg:before {
+    @media only screen and (max-width: 992px) {
+        height: 165%;
+    }
+
+    // @media only screen and (min-width: 768px) and  (max-width: 992px) {
+    //     height: 140%;
+    // }
+
+    height: 178%;
+}
+
+section#get-in-touch {
+    @media only screen and (max-width: 992px) {
+        margin-bottom: 250px;
+    }
+
+    margin-bottom: 300px;
 }
 
 footer {
