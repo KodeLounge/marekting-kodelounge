@@ -27,6 +27,16 @@ p {
 .site-nav a:active {
   color: #009D92; }
 
+.brand a {
+  color: #4a4a4a; }
+  .brand a:visited {
+    color: #4a4a4a; }
+  .brand a:hover {
+    color: #4a4a4a;
+    text-decoration: none; }
+  .brand a::active {
+    color: #4a4a4a; }
+
 .common-section-title {
   color: #00BBA6;
   font-size: 5.5rem;

@@ -30,6 +30,25 @@ p {
     }
 }
 
+.brand {
+    a {
+        color: $color-body-text;
+
+        &:visited {
+            color: $color-body-text
+        }
+
+        &:hover {
+            color: $color-body-text;
+            text-decoration: none
+        }
+
+        &::active {
+            color: $color-body-text
+        }
+    }
+}
+
 .common-section-title {
     color: $color-primary;
     font-size: 5.5rem;
