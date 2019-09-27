@@ -256,8 +256,21 @@ section#our-work.section-with-bg:before {
   .two-cols--col:last-of-type {
     border-bottom: 1px solid #dee2e6; }
 
+.expertise h4 {
+  margin-right: 10px; }
+  .expertise h4:before {
+    content: "\25A0";
+    color: #4a4a4a;
+    margin-right: 4px; }
+
+.expertise .two-cols--col:nth-last-of-type(2) {
+  border-bottom: none; }
+
+.expertise .two-cols--col:last-of-type {
+  border-right: 1px solid #dee2e6; }
+
 section#technologies.section-with-bg:before {
-  height: 145%; }
+  height: 128%; }
   @media only screen and (max-width: 576px) {
     section#technologies.section-with-bg:before {
       height: 115%; } }

@@ -242,6 +242,27 @@ img.work-card--logo {
     }
 }
 
+.expertise {
+    h4 {
+        margin-right: 10px;
+        &:before {
+            content: "\25A0";
+            color: $color-body-text;
+            margin-right: 4px; 
+        }
+    }
+
+    .two-cols--col {
+        &:nth-last-of-type(2) {
+            border-bottom: none;
+        }
+
+        &:last-of-type {
+            border-right: 1px solid $color-medium-grey;
+        }
+    }
+}
+
 section#technologies.section-with-bg:before {
     @media only screen and (max-width: 576px) {
         height: 115%;
@@ -251,7 +272,7 @@ section#technologies.section-with-bg:before {
         height: 125%;
     }
 
-    height: 145%;
+    height: 128%;
 }
 
 .lounger-icon {
