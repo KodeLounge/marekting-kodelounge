@@ -14,18 +14,48 @@ p {
   border: none;
   background-color: transparent; }
 
-.site-nav {
-  position: relative; }
-
 .site-nav a:visited {
   color: #00BBA6; }
 
 .site-nav a:hover {
   color: #009D92;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
 
 .site-nav a:active {
   color: #009D92; }
+
+.site-nav a:focus {
+  outline: none; }
+
+/* Hover effect */
+.site-nav a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #009D92;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  -o-transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px); }
+
+.site-nav a:hover::after,
+.site-nav a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px); }
 
 .brand a {
   color: #4a4a4a; }
@@ -115,9 +145,10 @@ section.site-section {
   padding-right: 15px; }
   .site-nav a {
     font-size: 2.5rem;
-    padding: 7px 10px;
-    margin: 0 12px;
-    color: #00BBA6; }
+    margin: 0 16px;
+    color: #00BBA6;
+    position: relative;
+    display: inline-block; }
     @media only screen and (max-width: 768px) {
       .site-nav a {
         font-size: 2rem;
@@ -259,9 +290,12 @@ section#our-work.section-with-bg:before {
 .expertise h4 {
   margin-right: 10px; }
   .expertise h4:before {
-    content: "\25A0";
-    color: #4a4a4a;
-    margin-right: 4px; }
+    content: "\25CF";
+    color: #00BBA6;
+    margin-right: 4px;
+    font-size: 14px;
+    top: -2px;
+    position: relative; }
 
 .expertise .two-cols--col:nth-last-of-type(2) {
   border-bottom: none; }
@@ -278,9 +312,54 @@ section#technologies.section-with-bg:before {
     section#technologies.section-with-bg:before {
       height: 125%; } }
 
+/* Hover flip animation */
+.flip-container {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.flipper {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100px;
+  position: relative; }
+
+.front, .back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg); }
+
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
 .lounger-icon {
   width: 100px;
   height: 100px; }
+
+.flip-container:hover .back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg); }
+
+.flip-container:hover .front {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
 
 section#location.section-with-bg:before {
   height: 165%; }
